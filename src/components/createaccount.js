@@ -35,7 +35,7 @@ function CreateAccount(){
     if (!validate(email,    'email'))    return;
     if (!validate(password, 'password')) return;
 
-    const createUrl = `/account/create/${name}/${email}/${password}`;
+    const createUrl = `http://167.172.234.182:3001/account/create/${name}/${email}/${password}`;
     //call express to set account in DB
     const response = await fetch(createUrl);
     const userResponse = await response.json(); //extract JSON from the http response
