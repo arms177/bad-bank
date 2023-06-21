@@ -5,7 +5,7 @@ import ReactLoading from 'react-loading';
 function AllData(){
   const [users, setUsers] = useState([]);
 
-  const usersUrl = `/account/all`;
+  const usersUrl = `http://167.172.234.182:3001/account/all`;
   //call express to fetch accounts in DB
   const getUsers = async () => {
     const response = await fetch(usersUrl);
