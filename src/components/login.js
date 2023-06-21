@@ -16,7 +16,7 @@ function Login({ change }){
 
   const handleLogin = async () => {
     let hasValidated;
-    const loginUrl = `/account/login/${email}/${password}`;
+    const loginUrl = `http://167.172.234.182:3001/account/login/${email}/${password}`;
     //call express to login user
     const response = await fetch(loginUrl);
     const userResponse = await response.json(); //extract JSON from the http response
