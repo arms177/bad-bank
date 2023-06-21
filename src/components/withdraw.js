@@ -46,7 +46,7 @@ function Withdraw(){
     setIsLoading(true);
     setTimeout(async () => {
       const amount = -parseInt(formik.values.withdraw);
-      const withdrawUrl = `/account/withdraw/${ctx.user.email}/${amount}`;
+      const withdrawUrl = `http://167.172.234.182:3001/account/withdraw/${ctx.user.email}/${amount}`;
       //call express to update balance in DB
       const response = await fetch(withdrawUrl);
       const userResponse = await response.json(); //extract JSON from the http response
