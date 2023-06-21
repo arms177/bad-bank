@@ -43,7 +43,7 @@ function Deposit(){
     setIsLoading(true);
     setTimeout(async () => {
       const amount = parseInt(formik.values.deposit);
-      const updateUrl = `/account/deposit/${ctx.user.email}/${amount}`;
+      const updateUrl = `http://167.172.234.182:3001/account/deposit/${ctx.user.email}/${amount}`;
       //call express to update balance in DB
       const response = await fetch(updateUrl);
       const userResponse = await response.json(); //extract JSON from the http response
