@@ -37,7 +37,7 @@ app.get('/account/all', function(req,res) {
 
 //deposit
 app.get('/account/deposit/:email/:amount', function(req,res) {
-  dal.updateDeposit(req.params.email, parseInt(req.params.amount))
+  dal.update(req.params.email, parseInt(req.params.amount))
     .then((balance) => {
       console.log(balance);
       res.send(balance);
